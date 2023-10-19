@@ -1,0 +1,206 @@
+---
+title: .f2[] .f-6[.cfb[Acknowledgments]]
+subtitle: 
+author: 
+institute: 
+date:
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, swart.css]
+    lib_dir: libs
+    self_contained: true
+    # chakra: libs/remark-latest.min.js
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: Base16/Bright
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+    pandoc_options:
+      latex_engine: xelatex # Use XeLaTeX for better font support
+      slide_level: 2 # Control slide levels
+classoption: aspectratio=169 # Set aspect ratio for PDF output
+geometry: margin=1in # Set PDF page margins
+
+---
+class: top
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer) # Custom 'xaringan' CSS Themes 
+style_duo_accent(
+  colors = c(
+    red = "red",
+    purple = "#3e2f5b",
+    lightpurple = "#DCD0FF",
+    lavender = "#967bb6",
+    violet = "#8A2BE2",
+    periwinkle = "#ccccff",
+    orange = "#FF5733", # Orange - Innovation and Excitement
+    green = "#136f63", # Teal - Creativity and Growth
+    white = "#FFFFFF",
+    yellow = "yellow", # Yellow - Optimism and Energy:
+    gold = "gold",
+    turquoise = "#00C5CD", # Turquoise - Balance and Clarity:
+    aquamarine = "#7FFFD4",
+    teal = "#2c8475",
+    darkgreen = "#006400",
+    forestgreen = "forestgreen",
+    firebrick = "firebrick",
+    lightcoral = "lightcoral",
+    black = "black",
+    charcoal = "#36454F",
+    purple = "#7030A0", # Purple (#7030A0) - Imagination and Open-mindedness
+    blue = "#0070C0", #Blue - Persuasion and Trust:
+    cornflowerblue = "cornflowerblue",
+    deepskyblue = "deepskyblue",
+    dodgerblue = "dodgerblue",
+    steelblue = "steelblue",
+    royalblue = "royalblue"),
+  primary_color = "black",  
+  secondary_color = "#FFFFFF",
+  # secondary_color = "yellow",
+  black_color = "#000004",
+  white_color = "#FFFFFF",
+  base_font_size = "20px",
+  text_font_family = "Jost",
+  text_font_url = "https://indestructibletype.com/fonts/Jost.css",
+  header_font_google = google_font("Roboto Slab", "400", "700"),
+  header_font_weight = "400",
+  inverse_background_color = "black",
+  # inverse_header_color = "#eaeaea",
+  inverse_header_color = "#FFFFFF",
+  title_slide_text_color = "#FFFFFF",
+  text_slide_number_color = "#FFFFFF",
+  text_bold_color = "#FF5733",
+  code_inline_color = "#FFFFFF",
+  code_highlight_color = "transparent",
+  link_color = "lightcoral",
+  text_color = "#FFFFFF",
+  header_color = "#FFFFFF",
+  background_color = "black",
+  blockquote_left_border_color = "steelblue",
+  # table_row_even_background_color = lighten_color("white", 0.9),
+  extra_fonts = list(
+    "https://indestructibletype.com/fonts/Jost.css",
+    google_font("Amatic SC", "400"))
+  
+)
+
+```
+
+
+```{r LIBRARIES, echo=FALSE, include=FALSE, warning=FALSE}
+####
+library(ggplot2) 
+library(tibble) 
+library(tidyr) 
+library(readr) 
+library(purrr) 
+library(dplyr) 
+library(stringr) 
+library(forcats) 
+library(lubridate) 
+####
+library(xaringan) 
+library(xaringanExtra) 
+library(xaringanthemer) 
+library(countdown) 
+library(htmltools) 
+library(htmlwidgets) 
+library(here) 
+library(knitr) 
+library(kableExtra) 
+library(DT) 
+library(shrtcts) 
+library(xaringanmediacalls)
+library(renderthis)
+```
+
+```{r xaringanExtra, echo = FALSE, warning = FALSE}
+xaringanExtra::use_animate_css()
+xaringanExtra::use_animate_all("fade")
+xaringanExtra::use_banner()
+xaringanExtra::use_clipboard()
+xaringanExtra::use_editable(expires = 1)
+xaringanExtra::use_extra_styles()
+xaringanExtra::use_fit_screen()
+# xaringanExtra::use_freezeframe()
+xaringanExtra::use_panelset()
+xaringanExtra::use_progress_bar()
+xaringanExtra::use_scribble()
+xaringanExtra::use_search()
+xaringanExtra::use_share_again()
+# xaringanExtra::use_slide_tone()  # not yet a feature I like
+xaringanExtra::use_tile_view()
+xaringanExtra::use_webcam()
+xaringanExtra::use_tachyons()
+
+```
+
+```{r xarington Countdown WHEN YOU NEED ONE, echo=FALSE}
+# countdown::countdown(
+#           minutes = 0,
+#           seconds = 90,
+#           warn_when = 5
+#           style = "position: relative; width: min-content; margin: 1em auto;",
+#           top = 0, bottom = 0,
+#           left = 0, right = 0,
+#           margin = "5%",
+#           font_size = "8em",
+#           color_running_background = "#31b09e",
+#           color_warning_background = "#f79334",
+#           color_finished_background = "#b56b6f",
+#           color_finished_text = "#eaeaea"
+#           # Fanfare when it's over
+#           play_sound = TRUE
+#
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Acknowledgments
+
+.left-column.center[
+<br>
+
+<img style="border-radius: 50%;" src="https://lauriebaker.rbind.io/author/dr.-laurie-baker/avatar_hu30116ce9545207e6cc07ea892252ff02_106302_270x270_fill_q90_lanczos_center.jpg" width="100px"/>
+]
+
+
+.right-column.f3.left[
+
+[Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at the Data Science Campus, Office for National Statistics, UK.as
+]
+
+---
+
+.left-column.center[
+
+<img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&v=4" width="125px"/>
+]
+
+.right-column.f3.left[
+[NHS-R Community](https://nhsrcommunity.com/) for the opportunity to provide this workshop
+]
+
+--
+- [NHSRtheme `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRtheme) developed by Tom Jemmett
+- [NHSRdatasets `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRdatasets) developed by Chris Mainey
+]
+
+---
+
+.pull-left-narrow[.center[
+<br>`r fontawesome::fa("smile", stroke = "#e5bf00", stroke_width = "20px", fill_opacity = 0, height = "3em")`
+]]
+
+.pull-right-wide[
+- [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
+- [xaringanExtra `r emo::ji("package")`](https://github.com/gadenbuie/xaringanExtra/#xaringanExtra) developed by Garrick Aden-Buie
+- Materials developed by [Alison Hill](https://twitter.com/apreshill) that have inspired and informed this workshop
+]
+
